@@ -23,3 +23,26 @@ const books = [
 
 const p2 = filterByRating(books);
 // console.log(p2);
+
+//!problem 3
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  //checking if all the arrays has same type or not
+  const referenceType = typeof arrays[0][0];
+  for (const array of arrays) {
+    for (const item of array) {
+      if (typeof item !== referenceType) {
+        throw new Error("All array elements must be of the same type");
+      }
+    }
+  }
+  //After checking doing cocatation and returning the output
+  let output: T[] = [];
+
+  for (let array of arrays) {
+    output = output.concat(array);
+  }
+  return output;
+}
+const p3 = concatenateArrays([3, 2], [5, 6], [9, 6]);
+console.log(p3);
