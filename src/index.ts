@@ -1,30 +1,22 @@
-// !Problem 1
+
 function formatString(input: string, toUpper?: boolean): string {
   if (toUpper || typeof toUpper === "undefined") {
     return input.toUpperCase();
   }
   return input.toLowerCase();
 }
-const p1 = formatString("Hello");
-// console.log(p1);
 
-//!problem 2
+
+
 function filterByRating(
   items: { title: string; rating: number }[]
 ): { title: string; rating: number }[] {
   const output = items.filter((item) => item.rating >= 4);
   return output;
 }
-const books = [
-  { title: "Book A", rating: 2.5 },
-  { title: "Book B", rating: 3.2 },
-  { title: "Book C", rating: 4.0 },
-];
 
-const p2 = filterByRating(books);
-// console.log(p2);
 
-//!problem 3
+
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   //checking if all the arrays has same type or not
@@ -44,10 +36,8 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
   }
   return output;
 }
-// const p3 = concatenateArrays([3, 2], [5, 6], [9, 6]);
-// console.log(p3);
 
-//!problem 4
+
 
 class Vehicle {
   private make: string;
@@ -70,10 +60,9 @@ class Car extends Vehicle {
     return `Model: ${this.model}`;
   }
 }
-const myCar = new Car("Toyota", 2020, "Corolla");
-// console.log(myCar.getModel());
 
-//!problem 5
+
+
 
 function processValue(value: string | number): number {
   if (typeof value === "string") {
@@ -81,10 +70,9 @@ function processValue(value: string | number): number {
   }
   return value * 2;
 }
-// const p5=processValue("hello")
-// console.log(p5)
 
-//!problem 5
+
+
 interface Product {
   name: string;
   price: number;
@@ -99,16 +87,9 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
   });
   return output;
 }
-const products = [
-  { name: "Pen", price: 10 },
-  { name: "Notebook", price: 25 },
-  { name: "Bag", price: 50 },
-];
 
-const p6 = getMostExpensiveProduct(products);
-console.log(p6);
 
-//!problem 7
+
 enum Day {
   Monday,
   Tuesday,
@@ -125,10 +106,9 @@ function getDayType(day: Day): string {
   }
   return "Weekday";
 }
-const p7 = getDayType(Day.Sunday);
-console.log(p7);
 
-//!problem 8
+
+
 async function squareAsync(n: number): Promise<number> {
   return new Promise<number>((resolve, reject) => {
     setTimeout(() => {
@@ -138,4 +118,3 @@ async function squareAsync(n: number): Promise<number> {
     }, 1000);
   });
 }
-// squareAsync(20).then(console.log);    
