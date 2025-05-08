@@ -116,15 +116,26 @@ enum Day {
   Thursday,
   Friday,
   Saturday,
-  Sunday
+  Sunday,
 }
 
-function getDayType(day: Day): string{
-  if (day===5 || day===6){
-    return `Weekend`
+function getDayType(day: Day): string {
+  if (day === 5 || day === 6) {
+    return `Weekend`;
   }
-  return "Weekday"
-
+  return "Weekday";
 }
-const p7=getDayType(Day.Sunday)
-console.log(p7)
+const p7 = getDayType(Day.Sunday);
+console.log(p7);
+
+//!problem 8
+async function squareAsync(n: number): Promise<number> {
+  return new Promise<number>((resolve, reject) => {
+    setTimeout(() => {
+      if (n >= 0) {
+        resolve(n * n);
+      } else reject("Negative number not allowed");
+    }, 1000);
+  });
+}
+// squareAsync(20).then(console.log);    
