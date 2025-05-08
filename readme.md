@@ -1,3 +1,8 @@
+# Topic 1: How TypeScript Improves Code Quality and Maintainability
+
+Javascript is a dynamically typed language. This means we can assign any type of valy to a variable. For small projects this can be okay, but for larger projects type checking is necessary for error free code. Here comes the typescript, providing a strong typing system, this can be solved. Using type checking, its easier to find bugs. As javascript can catch error in runtime but in typescript we can catch error while writing code. Typescript also provides a huge benefit. That is for developers who learned js from es6 he/she might not know about older version of javascript. Some browsers might not support es6. So for that reason code needs to be converted to older versions of js. By using typescript we can convert code to any versions of js code. Thus can improve code quality and project maintainability. 
+
+
 # Topic 2 : TypeScript Interfaces vs Types: Key Differences
 
 In TypeScript, to define the structure of data we use interfaces and types. But there are various differences between them as they differ in flexibility and usages. Some differences are given below:
@@ -72,7 +77,7 @@ type Person = {
 ```
 ## 3. Extending Union Types
 
-Interfaces support implementing and extending union types. On the other hand, type does not support implementing or extending union types.
+Interfaces support implementing and extending union types. On the other hand, type does not support implementing or extending union types directly.
 
 **Key Differences:**
 
